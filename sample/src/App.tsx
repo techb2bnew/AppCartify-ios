@@ -701,6 +701,7 @@ function AppWithNavigation({ route }: { route: any }) {
     </Tab.Navigator>
   );
 }
+
 function App({ navigation }: { navigation: any }) {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -793,7 +794,6 @@ function App({ navigation }: { navigation: any }) {
                   <AuthProvider>
                     <PersistGate loading={null} persistor={persistor}>
                     <SafeAreaView style={{flex:1}}>
-
                       {showSplash ? <CustomSplashScreen /> : <AppWithNavigation />}
                       </SafeAreaView>                    
                       </PersistGate>

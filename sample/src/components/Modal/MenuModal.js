@@ -21,28 +21,23 @@ const MenuModal = ({ modalVisible, setModalVisible, onPressCart, onPressSearch, 
   const userLoggedIn = useSelector(state => state.auth.isAuthenticated);
   const onPressShopByCate = () => {
     onPressShopByCatagory()
-    logEvent('shop By Catagory button from menu');
     setModalVisible(!modalVisible)
   }
   const onPressSaved = () => {
     navigation.navigate('Saved')
-    logEvent('Saved button  from menu');
     setModalVisible(!modalVisible)
   }
   const onPressProfile = () => {
     navigation.navigate('Profile')
-    logEvent('Profile button from menu');
     setModalVisible(!modalVisible)
   }
   const onPressLogin = () => {
     navigation.navigate('AuthStack')
-    logEvent('Login button from menu');
     setModalVisible(!modalVisible)
   }
 
   const onPressSignUp = () => {
     navigation.navigate('AuthStack')
-    logEvent('Sign in button from menu');
     setModalVisible(!modalVisible)
   }
   const changeTheme = () => {
@@ -116,7 +111,8 @@ const styles = StyleSheet.create({
   },
   modalView: {
     width: wp(100),
-    height: hp(100),
+    height: hp(97),
+    paddingVertical:60,
     backgroundColor: whiteColor
   },
   menuItem: {

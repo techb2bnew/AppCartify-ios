@@ -464,10 +464,10 @@ const styles = StyleSheet.create({
     color: whiteColor,
   },
   addAddressButtonRounded: {
-    bottom: 100,
+    bottom: 200,
     right: 20,
     width: wp(15),
-    height: hp(7.5),
+    height: hp(7),
     backgroundColor: redColor,
     borderRadius: 50
   },

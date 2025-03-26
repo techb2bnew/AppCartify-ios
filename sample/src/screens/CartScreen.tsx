@@ -197,12 +197,15 @@ function CartScreen({ navigation }: { navigation: any }): React.JSX.Element {
     logEvent('Click CheckOut ');
     if (!userLoggedIn) {
       logEvent('user not login Go to Auth');
+    
+      navigation.goBack()
+      navigation.navigate('AuthStack')
       Toast.show("Please First complete the registration process")
-      navigation.navigate("AuthStack");
     } else {
       if (checkoutURL) {
         // console.log(checkoutURL)
         // ShopifyCheckout.present(checkoutURL);
+        navigation.goBack()
         navigation.navigate('ShopifyCheckOut', {
           url: checkoutURL,
         });
